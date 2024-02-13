@@ -11,10 +11,10 @@ queue<int> seq;
 class Graph {
 private:
 	vector<list<int>> graph;
-	int size;
+	//int size;
 public:
 	Graph(int n) {
-		this->size = n;
+		//this->size = n;
 		list<int> l;
 		for (int i = 0; i <= n; i++) {
 			graph.push_back(l);
@@ -127,6 +127,7 @@ int main() {
 
 	seq.push(start);
 	graph.BFS(start);
+	//cout << "\n";
 
 	//graph.print();
 }
