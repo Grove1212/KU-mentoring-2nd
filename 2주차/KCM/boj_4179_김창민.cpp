@@ -67,19 +67,32 @@ bool jihun_move() {
 
 	return false;
 }
-
+/*
+void print() {
+	int i, j;
+	for (i = 0; i < r; i++) {
+		for (j = 0; j < c; j++)
+			cout << maze[i][j] << ' ';
+		cout << "\n";
+	}
+	cout << "\n";
+}
+*/
 int escape_time() {
 	int time = 0;
 	int flag = false;
 
+	//print();
 	while (!jihun.empty()) {
 		time++;
 
 		fire_spread();
 		if (jihun_move()) {
 			flag = true;
+			//print();
 			break;
 		}
+		//print();
 	}
 
 	if (flag) {
